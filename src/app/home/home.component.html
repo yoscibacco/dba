@@ -1,0 +1,91 @@
+<div class="wrapper">
+  <header>
+    <div class="logo">diy<div id="logoe">e</div>tisy<div id="logoe">e</div>n<span id="logo1">Bul</span><span id="logo2">Ara</span></div>
+  </header>
+<div class="content">
+  <div class="menu">
+    <div class="menuInner">
+      <select [(ngModel)]="selectedCity" (ngModelChange)="onCitySelect($event)" class="select">
+        <option [ngValue]="null" selected disabled>İl Seç</option>
+          <option *ngFor="let cities of city" [ngValue]="cities" [disabled]="cities.disable">
+            {{ cities.name }}
+          </option>
+        </select>
+        <select [(ngModel)]="selectedDown" (ngModelChange)="onDistrictSelect($event)" class="select">
+          <option [ngValue]="null"  selected disabled>İlçe Seç</option>
+            <option *ngFor="let dw of selectedCity.down" [ngValue]="dw" [disabled]="dw.disable">
+              {{dw.name}}
+            </option>
+        </select>
+        <button type="button" class="find" (click)="show()">Ara</button>
+    </div>
+  </div>
+
+  <div class="motto" #mott>
+  <!--Türkiyedeki Diyetisyenleri Bul-->
+  </div>
+
+  <div *ngIf="selectedCity">
+    <div class="infoBox animated" *ngFor="let ax of showedOption.places">
+      <span class="nPlace">{{ax.pname}}</span>
+
+      <span class="nType">{{ax.type}}</span>
+
+      <div class="part fp">
+        <span class="jam jam-user-square"></span>
+        <span class="nName">{{ax.name}}</span>-<span class="nDegree">{{ax.degree}}</span>
+      </div>
+
+      <div class="part">
+        <span class="jam jam-instagram"></span>
+        <span class="nText">Instagram:</span>
+        <span class="nIns" id="n-ins">
+          <a href="{{ax.insUrl}}" target="_blank"> {{ax.ins}} </a>
+          </span>
+      </div>
+
+      <div class="part">
+        <span class="jam jam-home"></span>
+        <span class="nText">Adres:</span>
+        <span class="nAddress" id="n-address">{{ax.address}}</span>
+      </div>
+
+      <div class="part">
+        <span class="jam jam-whatsapp" ></span>
+        <span class="nText">Telefon:</span>
+        <span class="nTel" id="n-tel">
+          <a href="{{ax.telD}}">
+            {{ax.tel}}
+          </a>
+        </span>
+      </div>
+
+      <div class="part">
+        <span class="jam jam-screen"></span>
+        <span class="nText">Web Sitesi:</span>
+        <span id="nWeb">
+          <a href="{{ax.web}}" target="_blank">{{ax.webN}}</a>
+        </span>
+      </div>
+
+      <div class="part">
+        <span class="jam jam-inbox"></span>
+        <span class="nText">E-posta:</span>
+        <span class="nMail" id="n-mail">
+        <a href="{{ax.mailTo}}">
+          {{ax.mail}}
+        </a>
+        </span>
+      </div>
+      <div class="part">
+        <span class="jam jam-map-marker"></span>
+        <span class="nText">Konum:</span>
+        <span id="maps">
+          <a href="{{ax.maps}}" target="_blank">Harita</a>
+        </span>
+      </div>
+   </div>
+</div>
+
+</div>
+</div>
