@@ -123,7 +123,7 @@ export class HomeComponent {
 
 show() {
       setTimeout(()=>{
-      this.showedOption = this.selectedDown;
+/*      this.showedOption = this.selectedDown;*/
       this.router.navigate(['/city',  this.selectedCity.name, this.selectedDown.name]);
       /*this.router.navigate(['/city', this.selectedCity.name, this.selectedDown.name]);
       */
