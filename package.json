@@ -31,13 +31,12 @@
     "path": "^0.12.7",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
-    "typescript": "~3.3.3333",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "~0.13.0",
     "@angular/compiler": "~7.2.0",
     "@angular/compiler-cli": "^7.2.6",
-    "@angular-devkit/build-angular": "~0.13.0",
     "@angular/language-service": "~7.2.0",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
@@ -54,6 +53,6 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
-    "typescript": "~2.3.3"
+    "typescript": "^3.2.4"
   }
 }
