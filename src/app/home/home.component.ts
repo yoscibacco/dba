@@ -10,8 +10,8 @@ declare var $ :any;
 export class HomeComponent {
 
 
-Object[];
-  city:Array<Object> =[
+  city:Array<String>; 
+  this.city=[
       {'name':'Adana',
       'value':1,
       'down':[
