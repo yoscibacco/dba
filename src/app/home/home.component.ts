@@ -10,7 +10,7 @@ declare var $ :any;
 export class HomeComponent {
 
 
-  city:Array<String>;
+  city:Array[];
 
 
       constructor(private router: Router) {
