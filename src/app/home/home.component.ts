@@ -107,7 +107,7 @@ export class HomeComponent {
       selectedCity = this.city[0];
       selectedDown = this.selectedCity.down[0];
       selectedPlaces = this.selectedDown.places[0];
-
+      showedOption=[];
       /*ROUTER KODU*/
       onCitySelect(city) {
       this.selectedCity = city;
