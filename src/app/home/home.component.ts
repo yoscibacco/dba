@@ -11,7 +11,7 @@ export class HomeComponent {
 
 
 
-  city:Array= [
+  city:Array [
       {'name':'Adana',
       'value':1,
       'down':[
