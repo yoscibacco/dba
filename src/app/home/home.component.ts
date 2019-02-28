@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Input, Output, ViewChild  } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ViewChild  } from '@angular/core';
 import { Router } from '@angular/router';
 declare var jquery:any;
 declare var $ :any;
@@ -7,7 +7,7 @@ declare var $ :any;
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
 
 
