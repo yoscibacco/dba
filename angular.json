@@ -19,13 +19,17 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/normalize.min.css",
+              "src/aos.min.css",
+              "src/productsans.min.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "src/aos.min.js",
+              "src/jquery.3.3.1.min.js"
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {
