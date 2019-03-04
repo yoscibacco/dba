@@ -19,7 +19,8 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
-              "src/assets"
+              "src/assets",
+              "src/icon.png"
             ],
             "styles": [
               "src/normalize.min.css",
@@ -28,7 +29,8 @@
             ],
             "scripts": [
               "src/aos.min.js",
-              "src/jquery.3.3.1.min.js"
+              "src/jquery.3.3.1.min.js",
+              "src/script.js"
             ],
             "es5BrowserSupport": true
           },
