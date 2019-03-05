@@ -8,7 +8,7 @@ declare var $ :any;
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent  {
 
 
   /*city:Array<any>=[
@@ -101,15 +101,20 @@ export class HomeComponent implements OnInit {
     ];*/
 
 city:Array<any>;
-      constructor(private dataService:DataService,private router: Router) {
-
-      }
-      ngOnInit(){
+  selectedCity=[];
+  selectedDown=[];
+  selectedPlaces=[];
+      constructor(public dataService:DataService,private router: Router) {
         this.city=this.dataService.city;
+        this.selectedCity = this.dataService.selectedCity;
+        this.selectedDown = this.dataService.selectedDown;
+        this.selectedPlaces =this.dataService.selectedPlaces;
       }
-      selectedCity = this.city[0];
+
+
+      /*selectedCity = this.city[0];
       selectedDown = this.selectedCity.down[0];
-      selectedPlaces = this.selectedDown.places[0];
+      selectedPlaces = this.selectedDown.places[0];*/
       showedOption=[];
       /*ROUTER KODU*/
       onCitySelect(city) {

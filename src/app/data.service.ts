@@ -91,5 +91,8 @@ export class DataService {
           {'name':'31_3 Beslenme Danışmanlığı'}
         ]}]
       }];
+      selectedCity = this.city[0];
+      selectedDown = this.selectedCity.down[0];
+      selectedPlaces = this.selectedDown.places[0];
   constructor() { }
 }

@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule} from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+import { DataService } from './data.service';
 
 const appRoutes: Routes = [
 { path: '', component: HomeComponent },
@@ -24,7 +25,9 @@ const appRoutes: Routes = [
       { enableTracing: true }
     ),
   ],
-  providers: [],
+  providers: [
+    DataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
