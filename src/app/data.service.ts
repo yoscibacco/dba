@@ -1,17 +1,10 @@
-import { Component, EventEmitter, Input, Output, ViewChild, OnInit  } from '@angular/core';
-import { Router } from '@angular/router';
-import { DataService } from '../data.service';
-declare var jquery:any;
-declare var $ :any;
-@Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
 })
-export class HomeComponent implements OnInit {
-
-
-  /*city:Array<any>=[
+export class DataService {
+  city=[
       {'name':'Adana',
       'value':1,
       'down':[
@@ -97,40 +90,6 @@ export class HomeComponent implements OnInit {
           {'name':'31_2 Hastanesi'},
           {'name':'31_3 Beslenme Danışmanlığı'}
         ]}]
-      }
-    ];*/
-
-city:Array<any>;
-      constructor(private dataService:DataService,private router: Router) {
-
-      }
-      ngOnInit(){
-        this.city=this.dataService.city;
-      }
-      selectedCity = this.city[0];
-      selectedDown = this.selectedCity.down[0];
-      selectedPlaces = this.selectedDown.places[0];
-      showedOption=[];
-      /*ROUTER KODU*/
-      onCitySelect(city) {
-      this.selectedCity = city;
-      if (city.down && city.down.length > 0) {
-      this.selectedDown = city.down[0];
-      } else {
-      this.selectedDown = null;
-      }
-      }
-      onDistrictSelect(district) {
-      this.selectedDown = district;
-      }
-      /*ROUTER KODU*/
-
-show() {
-      setTimeout(()=>{
-      this.showedOption = this.selectedDown;
-      this.router.navigate(['/city',  this.selectedCity.name, this.selectedDown.name]);
-      /*this.router.navigate(['/city', this.selectedCity.name, this.selectedDown.name]);
-      */
-      },1200);
-}
+      }];
+  constructor() { }
 }
