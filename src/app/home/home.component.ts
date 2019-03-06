@@ -8,10 +8,10 @@ declare var $ :any;
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent  {
+export class HomeComponent {
 
 
-  /*city:Array<any>=[
+  city:Array<any>=[
       {'name':'Adana',
       'value':1,
       'down':[
@@ -98,23 +98,16 @@ export class HomeComponent  {
           {'name':'31_3 Beslenme Danışmanlığı'}
         ]}]
       }
-    ];*/
+    ];
+      constructor(private router: Router) {
 
-city:Array<any>;
-  selectedCity=[];
-  selectedDown=[];
-  selectedPlaces=[];
-      constructor(public dataService:DataService,private router: Router) {
-        this.city=this.dataService.city;
-        this.selectedCity = this.dataService.selectedCity;
-        this.selectedDown = this.dataService.selectedDown;
-        this.selectedPlaces =this.dataService.selectedPlaces;
       }
 
 
-      /*selectedCity = this.city[0];
+
+      selectedCity = this.city[0];
       selectedDown = this.selectedCity.down[0];
-      selectedPlaces = this.selectedDown.places[0];*/
+      selectedPlaces = this.selectedDown.places[0];
       showedOption=[];
       /*ROUTER KODU*/
       onCitySelect(city) {

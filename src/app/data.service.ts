@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DataService {
-  city=[
+  city:Array<any>=[
       {'name':'Adana',
       'value':1,
       'down':[
@@ -94,5 +94,7 @@ export class DataService {
       selectedCity = this.city[0];
       selectedDown = this.selectedCity.down[0];
       selectedPlaces = this.selectedDown.places[0];
+      showedOption=[];
+
   constructor() { }
 }
